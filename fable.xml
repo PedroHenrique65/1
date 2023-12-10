@@ -12,7 +12,7 @@
 		<agent img="floor2.png" x="300" y="0" width="100" height="100" />
 		<agent img="floor3.png" x="400" y="0" width="100" height="100" />
 
-		<agent img="box.png" x="100" y="100" width="30" height="30"
+		<agent img="empty.png" x="0" y="0" width="100" height="100" /> <agent img="box.png" x="100" y="100" width="30" height="30"
 			on-touch="unlockDoor">
 			<unlockDoor img="key.png" />
 		</agent>
@@ -28,5 +28,8 @@
 	</page>
 
 	<page background="bg_next_page.png">
-		</page>
+		<agent text="Parabéns! Você completou a missão!"
+			x="20" y="440" font-size="18" color="white"
+			width="300" />
+	</page>
 </fable>
