@@ -1,6 +1,32 @@
 <fable>
-	<page>
-  
-    
-  </page>
+	<page background="bg_lab.png">
+		<agent text="Clique no painel de controle para desbloquear a porta"
+			x="20" y="440" font-size="18" color="white"
+			width="300" on-trigger="activateSwitch">
+			<activateSwitch text="Acesso liberado! Agora, busque a chave escondida para abrir a porta." />
+		</agent>
+
+		<agent img="floor.png" x="0" y="0" width="100" height="100" />
+		<agent img="floor2.png" x="100" y="0" width="100" height="100" />
+		<agent img="floor2.png" x="200" y="0" width="100" height="100" />
+		<agent img="floor2.png" x="300" y="0" width="100" height="100" />
+		<agent img="floor3.png" x="400" y="0" width="100" height="100" />
+
+		<agent img="box.png" x="100" y="100" width="30" height="30"
+			on-touch="unlockDoor">
+			<unlockDoor img="key.png" />
+		</agent>
+
+		<agent img="switchLock.png" x="100" y="200" width="30" height="30"
+			on-touch="activateSwitch" />
+		<activateSwitch img="switchUnlocked.png" />
+
+		<agent img="locked.png" x="200" y="100" width="125" height="200"
+			visible="false" on-touch="openDoor" requires-key="true">
+			<open img="unlocked.png" />
+		</agent>
+	</page>
+
+	<page background="bg_next_page.png">
+		</page>
 </fable>
